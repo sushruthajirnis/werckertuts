@@ -1,4 +1,4 @@
-from import app
+from app import app
 import redis
 import os
 import unittest
