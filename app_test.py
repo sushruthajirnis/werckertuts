@@ -13,7 +13,7 @@ class CloudTestCase(unittest.TestCase):
         app.redis.flushdb()
     def test_clouds(self):
         tester=app.test_client(self)
-        response=tester.get('/clouds.json',content-type='application/json')
+        response = tester.get('/clouds.json', content_type='application/json')
         self.assertEqual(response.status.code,200)
         self.assertEqual(response.data,json.dumps(['Altocumulus','Altostratus','Cumulonimbus','Nimbostratus']))
 
