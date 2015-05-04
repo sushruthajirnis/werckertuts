@@ -6,9 +6,8 @@ from flask import Response
 from flask import json
 
 app = Flask(__name__)
-#app.redis = redis.StrictRedis(host=os.getenv('WERCKER_REDIS_HOST', 'localhost'),
-#              port= 6379, db=0)
-app.redis=redis.StrictRedis(host='localhost',port='6379',db=0)
+app.redis = redis.StrictRedis(host=os.getenv('WERCKER_REDIS_HOST', 'localhost'),
+              port= 6379, db=0)
 
 @app.route("/clouds.json")
 def clouds():
